@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import BottomNavigation from "@/components/bottom-navigation";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="text-sans">{children}</body>
+      <body className="text-sans sm:max-w-lg mx-auto sm:border relative">
+        {children}
+        <BottomNavigation />
+      </body>
     </html>
   );
 }
