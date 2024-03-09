@@ -1,7 +1,10 @@
+import CardBalance from "@/components/pages/home/card-balance";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="flex flex-row gap-3">
+      <CardBalance />
+      <CardBalance />
     </div>
   );
 }

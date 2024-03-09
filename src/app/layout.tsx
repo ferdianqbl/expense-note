@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="text-sans sm:max-w-lg mx-auto sm:border relative">
         <TopNavigation />
-        <main className="py-10 px-4">{children}</main>
+        <main className="py-14 px-4">{children}</main>
         <BottomNavigation />
       </body>
     </html>
