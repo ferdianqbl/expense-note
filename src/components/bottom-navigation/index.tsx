@@ -11,7 +11,7 @@ const BottomNavigation = () => {
       <Link href={"/"}>
         <Button
           variant={"ghost"}
-          className={`flex justify-center items-center flex-col h-fit gap-1 w-full ${
+          className={`hover:bg-transparent flex justify-center items-center flex-col h-fit gap-1 w-full ${
             pathname === "/"
               ? "text-accent-foreground font-medium"
               : "text-slate-300 font-normal"
@@ -24,7 +24,7 @@ const BottomNavigation = () => {
       <Link href={"/summary"}>
         <Button
           variant={"ghost"}
-          className={`flex justify-center items-center flex-col h-fit gap-1 w-full ${
+          className={`hover:bg-transparent flex justify-center items-center flex-col h-fit gap-1 w-full ${
             pathname === "/summary"
               ? "text-accent-foreground font-medium"
               : "text-slate-300 font-normal"
@@ -37,7 +37,7 @@ const BottomNavigation = () => {
       <Link href={"/logs"}>
         <Button
           variant={"ghost"}
-          className={`flex justify-center items-center flex-col h-fit gap-1 w-full ${
+          className={`hover:bg-transparent flex justify-center items-center flex-col h-fit gap-1 w-full ${
             pathname === "/logs"
               ? "text-accent-foreground font-medium"
               : "text-slate-300 font-normal"
