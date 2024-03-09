@@ -7,7 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 const BottomNavigation = () => {
   const pathname = usePathname();
   return (
-    <nav className="fixed bottom-0 left-0 right-0 sm:max-w-lg mx-auto grid grid-cols-3 dark:bg-black px-4 py-2 sm:px-0 border-t z-10 dark:border-zinc-600 bg-white">
+    <nav className="fixed bottom-0 left-0 right-0 sm:max-w-lg mx-auto grid grid-cols-3 dark:bg-black px-4 py-2 sm:px-0 border-t z-10 dark:border-zinc-600 bg-white items-center">
       <Link href={"/"}>
         <Button
           variant={"ghost"}
