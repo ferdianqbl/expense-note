@@ -17,7 +17,7 @@ const BottomNavigation = () => {
               : "text-slate-300 font-normal"
           }`}
         >
-          <HomeIcon className="sm:w-5 sm:h-5 w-4 h-4" />
+          <HomeIcon className="sm:w-6 sm:h-6 w-5 h-5" />
           <span className="">Home</span>
         </Button>
       </Link>
@@ -30,7 +30,7 @@ const BottomNavigation = () => {
               : "text-slate-300 font-normal"
           }`}
         >
-          <BarChartIcon className="sm:w-5 sm:h-5 w-4 h-4" />
+          <BarChartIcon className="sm:w-6 sm:h-6 w-5 h-5" />
           <span className="">Summary</span>
         </Button>
       </Link>
@@ -43,7 +43,7 @@ const BottomNavigation = () => {
               : "text-slate-300 font-normal"
           }`}
         >
-          <ActivityLogIcon className="sm:w-5 sm:h-5 w-4 h-4" />
+          <ActivityLogIcon className="sm:w-6 sm:h-6 w-5 h-5" />
           <span className="">Logs</span>
         </Button>
       </Link>
