@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="text-sans sm:max-w-lg mx-auto relative">
+      <body className="text-sans max-w-md mx-auto relative">
         <TopNavigation />
         <main className="pt-4 px-4 pb-24">{children}</main>
         <BottomNavigation />
