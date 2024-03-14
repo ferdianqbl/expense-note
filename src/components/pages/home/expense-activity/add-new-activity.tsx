@@ -1,18 +1,8 @@
 import { Button } from "@/components/ui/button";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -20,7 +10,7 @@ import {
 
 import { Input } from "@/components/ui/input";
 import { PlusIcon } from "@radix-ui/react-icons";
-import AddNewCategory from "./add-new-category";
+import CategoryActivity from "./category-activity";
 
 const AddNewActivity = () => {
   return (
@@ -38,7 +28,7 @@ const AddNewActivity = () => {
           <div className="flex flex-col gap-2">
             <Input type="text" placeholder="0" className="" />
             <Input type="text" placeholder="Notes" />
-            <AddNewCategory />
+            <CategoryActivity />
           </div>
           <div className="flex flex-col gap-2">
             <Button type="submit" className="w-full">
