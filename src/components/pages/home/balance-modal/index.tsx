@@ -3,32 +3,42 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
+  DrawerDescription,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
 
 import { Input } from "@/components/ui/input";
-import { PlusIcon } from "@radix-ui/react-icons";
-import CategoryActivity from "./category-activity";
+import { Pencil2Icon, PlusIcon } from "@radix-ui/react-icons";
 
-const AddNewActivity = () => {
+const BalanceModal = () => {
   return (
     <Drawer>
       <DrawerTrigger asChild className="focus:outline-none">
-        <PlusIcon className="sm:w-6 sm:h-6 w-5 h-5" />
+        <Button
+          variant={"link"}
+          size={"icon"}
+          type="button"
+          className="flex items-center"
+        >
+          <Pencil2Icon className="w-4 h-4" />
+        </Button>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle>
-            <h3 className="text-xl font-medium">Add Expense</h3>
+            <h3 className="text-xl font-medium">Edit Balance</h3>
           </DrawerTitle>
+          <DrawerDescription>
+            <p className="text-sm text-gray-500">
+              Edit your balance for this month.
+            </p>
+          </DrawerDescription>
         </DrawerHeader>
         <form action="" className="mt-4 flex flex-col gap-4 p-4">
           <div className="flex flex-col gap-2">
             <Input type="text" placeholder="0" className="" />
-            <Input type="text" placeholder="Notes" />
-            <CategoryActivity />
           </div>
           <div className="flex flex-col gap-2">
             <Button type="submit" className="w-full">
@@ -46,4 +56,4 @@ const AddNewActivity = () => {
   );
 };
 
-export default AddNewActivity;
+export default BalanceModal;

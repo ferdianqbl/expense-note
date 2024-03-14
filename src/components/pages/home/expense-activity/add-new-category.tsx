@@ -10,7 +10,6 @@ import {
 
 import { Input } from "@/components/ui/input";
 import { PlusIcon } from "@radix-ui/react-icons";
-import CategoryActivity from "./category-activity";
 
 const AddNewCategory = () => {
   return (
