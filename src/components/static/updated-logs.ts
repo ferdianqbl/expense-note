@@ -1,7 +1,8 @@
 import { TLogs } from "@/lib/types/logs-types";
 
 const logsData: TLogs = {
-  "Mon, March 14 2024": [
+  "Sat, March 16 2024": ["Added summary page screen"],
+  "Thu, March 14 2024": [
     "Added add new category modal today",
     "Added dark mode",
   ],
