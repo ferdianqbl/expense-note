@@ -14,7 +14,7 @@ const BottomNavigation = () => {
           className={`hover:bg-transparent flex justify-center items-center flex-col h-fit gap-1 w-full ${
             pathname === "/"
               ? "text-accent-foreground font-medium"
-              : "text-slate-300 font-normal"
+              : "text-slate-300 font-normal dark:text-slate-500"
           }`}
         >
           <HomeIcon className="sm:w-6 sm:h-6 w-5 h-5" />
@@ -27,7 +27,7 @@ const BottomNavigation = () => {
           className={`hover:bg-transparent flex justify-center items-center flex-col h-fit gap-1 w-full ${
             pathname === "/summary"
               ? "text-accent-foreground font-medium"
-              : "text-slate-300 font-normal"
+              : "text-slate-300 font-normal dark:text-slate-500"
           }`}
         >
           <BarChartIcon className="sm:w-6 sm:h-6 w-5 h-5" />
@@ -40,7 +40,7 @@ const BottomNavigation = () => {
           className={`hover:bg-transparent flex justify-center items-center flex-col h-fit gap-1 w-full ${
             pathname === "/logs"
               ? "text-accent-foreground font-medium"
-              : "text-slate-300 font-normal"
+              : "text-slate-300 font-normal dark:text-slate-500"
           }`}
         >
           <ActivityLogIcon className="sm:w-6 sm:h-6 w-5 h-5" />
