@@ -11,6 +11,7 @@ import {
 import SummaryBalance from "@/components/pages/summary/card/card-balance";
 import SummaryExpense from "@/components/pages/summary/card/card-expense";
 import SelectMonth from "@/components/pages/summary/select-month";
+import ExpenseActivity from "@/components/pages/summary/expense-activity";
 
 const Page = () => {
   const data = [
@@ -139,13 +140,13 @@ const Page = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-3">
       <SelectMonth />
       <div className="flex flex-col gap-3">
         <SummaryBalance />
         <SummaryExpense />
       </div>
-      <div className="h-[120px]">
+      <div className="mt-8 h-[120px]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data}>
             {/* <YAxis className="text-sm" orientation="right" /> */}
@@ -164,6 +165,8 @@ const Page = () => {
           </BarChart>
         </ResponsiveContainer>
       </div>
+
+      <ExpenseActivity />
     </div>
   );
 };
