@@ -10,7 +10,7 @@ const TopNavigation = () => {
 
   if (pathname === "/login" || pathname === "/register")
     return (
-      <nav className="sm:max-w-md mx-auto flex justify-between px-4 py-2 border-b dark:border-zinc-600 whitespace-nowrap items-center">
+      <nav className="sm:max-w-md mx-auto flex justify-between px-4 py-2 border-b dark:border-zinc-600 whitespace-nowrap items-center relative">
         <Button
           variant={"outline"}
           className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
@@ -32,11 +32,13 @@ const TopNavigation = () => {
           <MoonIcon className="h-[1.2rem] w-[1.2rem]" />
         </Button>
 
-        <div className="w-full text-end font-bold lowercase">Expenspedia</div>
+        <div className="w-full text-end font-bold lowercase cursor-none">
+          Expenspedia
+        </div>
       </nav>
     );
   return (
-    <nav className="sm:max-w-md mx-auto grid grid-cols-3 px-4 py-2 border-b dark:border-zinc-600 whitespace-nowrap items-center">
+    <nav className="sm:max-w-md mx-auto grid grid-cols-3 px-4 py-2 border-b dark:border-zinc-600 whitespace-nowrap items-center relative">
       <Button
         variant={"outline"}
         className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
