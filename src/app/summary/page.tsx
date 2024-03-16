@@ -151,7 +151,14 @@ const Page = () => {
           <BarChart data={data}>
             {/* <YAxis className="text-sm" orientation="right" /> */}
             <XAxis dataKey={"date"} />
-            <Tooltip />
+            <Tooltip
+              contentStyle={{
+                color: "black",
+              }}
+              itemStyle={{
+                color: "black",
+              }}
+            />
             <Bar
               dataKey="expense"
               style={
