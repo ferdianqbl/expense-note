@@ -155,7 +155,7 @@ const Page = () => {
               content={({ payload }) => {
                 if (payload && payload.length > 0) {
                   return (
-                    <div className="bg-background p-2 rounded-md shadow-md">
+                    <div className="bg-background p-2 rounded-md shadow-md border border-foreground">
                       <div>
                         <span className="font-bold">Date: </span>
                         <span>{payload[0].payload.date}</span>
