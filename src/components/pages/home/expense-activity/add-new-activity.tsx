@@ -16,7 +16,9 @@ const AddNewActivity = () => {
   return (
     <Drawer>
       <DrawerTrigger asChild className="focus:outline-none">
-        <PlusIcon className="sm:w-6 sm:h-6 w-5 h-5" />
+        <Button variant={"outline"} className="ms-auto" size={"icon"}>
+          <PlusIcon className="h-[1.2rem] w-[1.2rem]" />
+        </Button>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>

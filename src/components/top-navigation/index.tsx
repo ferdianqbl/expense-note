@@ -26,11 +26,13 @@ const TopNavigation = () => {
           setTheme("light");
         }}
       >
-        <MoonIcon className=" h-[1.2rem] w-[1.2rem]" />
+        <MoonIcon className="h-[1.2rem] w-[1.2rem]" />
       </Button>
 
-      <div className="w-full text-center font-bold">Ferdianqbl</div>
-      <ExitIcon className="sm:w-6 sm:h-6 w-5 h-5 ms-auto" />
+      <div className="w-full text-center font-bold lowercase">Ferdianqbl</div>
+      <Button variant={"outline"} className="ms-auto" size={"icon"}>
+        <ExitIcon className="h-[1.2rem] w-[1.2rem]" />
+      </Button>
     </nav>
   );
 };
