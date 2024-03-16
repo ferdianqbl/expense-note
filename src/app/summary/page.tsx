@@ -152,11 +152,22 @@ const Page = () => {
             {/* <YAxis className="text-sm" orientation="right" /> */}
             <XAxis dataKey={"date"} />
             <Tooltip
-              contentStyle={{
-                color: "black",
-              }}
-              itemStyle={{
-                color: "black",
+              content={({ payload }) => {
+                if (payload && payload.length > 0) {
+                  return (
+                    <div className="bg-background p-2 rounded-md shadow-md">
+                      <div>
+                        <span className="font-bold">Date: </span>
+                        <span>{payload[0].payload.date}</span>
+                      </div>
+                      <div>
+                        <span className="font-bold">Expense: </span>
+                        <span>{payload[0].payload.expense}</span>
+                      </div>
+                    </div>
+                  );
+                }
+                return null;
               }}
             />
             <Bar
