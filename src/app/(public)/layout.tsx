@@ -9,7 +9,9 @@ export default function PrivateLayout({
   return (
     <>
       <TopNavigation />
-      <main className="p-4">{children}</main>
+      <main className="px-4 flex flex-col w-full items-center min-h-screen justify-center">
+        {children}
+      </main>
     </>
   );
 }
