@@ -2,12 +2,41 @@
 import { ExitIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 import { Button } from "../ui/button";
+import { usePathname } from "next/navigation";
 
 const TopNavigation = () => {
   const { setTheme } = useTheme();
+  const pathname = usePathname();
 
+  if (pathname === "/login" || pathname === "/register")
+    return (
+      <nav className="sm:max-w-md mx-auto flex justify-between px-4 py-2 border-b dark:border-zinc-600 whitespace-nowrap items-center">
+        <Button
+          variant={"outline"}
+          className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+          size={"icon"}
+          onClick={() => {
+            setTheme("dark");
+          }}
+        >
+          <SunIcon className="h-[1.2rem] w-[1.2rem]" />
+        </Button>
+        <Button
+          className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+          variant={"outline"}
+          size={"icon"}
+          onClick={() => {
+            setTheme("light");
+          }}
+        >
+          <MoonIcon className="h-[1.2rem] w-[1.2rem]" />
+        </Button>
+
+        <div className="w-full text-end font-bold lowercase">Expenspedia</div>
+      </nav>
+    );
   return (
-    <nav className="sm:max-w-md mx-auto grid grid-cols-3 px-4 py-2 border-b z-10 dark:border-zinc-600 whitespace-nowrap items-center">
+    <nav className="sm:max-w-md mx-auto grid grid-cols-3 px-4 py-2 border-b dark:border-zinc-600 whitespace-nowrap items-center">
       <Button
         variant={"outline"}
         className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"

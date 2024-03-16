@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import BottomNavigation from "@/components/bottom-navigation";
-import TopNavigation from "@/components/top-navigation";
 import { ThemeProvider } from "@/lib/contexts/theme-provider";
 
 export const metadata: Metadata = {
@@ -23,9 +21,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <TopNavigation />
-          <main className="pt-4 px-4 pb-24">{children}</main>
-          <BottomNavigation />
+          {children}
         </ThemeProvider>
       </body>
     </html>
