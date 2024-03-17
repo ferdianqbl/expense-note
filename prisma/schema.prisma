@@ -14,7 +14,7 @@ datasource db {
 }
 
 model User {
-  id        Int       @id @default(autoincrement())
+  id        Int       @id @unique @default(autoincrement())
   userId    String    @unique @default(cuid())
   username  String    @unique @db.VarChar(255)
   photo     String?   @db.Text
@@ -27,7 +27,7 @@ model User {
 }
 
 model Category {
-  id         Int       @id @default(autoincrement())
+  id         Int       @id @unique @default(autoincrement())
   categoryId String    @unique @default(cuid())
   name       String
   icon       String
@@ -37,7 +37,7 @@ model Category {
 }
 
 model Balance {
-  id        Int      @id @default(autoincrement())
+  id        Int      @id @unique @default(autoincrement())
   balanceId String   @unique @default(cuid())
   userId    Int
   balance   Float
@@ -48,7 +48,7 @@ model Balance {
 }
 
 model Expense {
-  id         Int        @id @default(autoincrement())
+  id         Int        @id @unique @default(autoincrement())
   expenseId  String     @unique @default(cuid())
   categoryId Int
   userId     Int
