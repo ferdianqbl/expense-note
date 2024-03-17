@@ -4,7 +4,7 @@ CREATE TABLE "User" (
     "userId" TEXT NOT NULL,
     "username" VARCHAR(255) NOT NULL,
     "photo" TEXT,
-    "token" VARCHAR(255) NOT NULL,
+    "token" VARCHAR(255),
     "password" VARCHAR(255) NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
