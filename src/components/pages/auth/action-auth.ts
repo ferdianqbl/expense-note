@@ -1,6 +1,7 @@
 "use server";
 
 import prisma from "@/lib/prisma";
+import { serverSaveToken } from "@/lib/token/token-server";
 import { APIResponseType } from "@/lib/types/api";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -74,8 +75,9 @@ export const loginAction = async (username: string, password: string) => {
 
     const userData = {
       id: user?.id,
+      userId: user?.userId,
       username: user?.username,
-      photo: user?.photo || null,
+      photo: user?.photo || "",
     };
 
     const token = jwt.sign(
@@ -87,6 +89,8 @@ export const loginAction = async (username: string, password: string) => {
         expiresIn: 60 * 60,
       }
     );
+
+    serverSaveToken(token);
 
     return {
       error: false,

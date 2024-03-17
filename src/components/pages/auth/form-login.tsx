@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { FieldValues, useForm } from "react-hook-form";
 import { loginAction } from "./action-auth";
 import { useToast } from "@/components/ui/use-toast";
+import jwt from "jsonwebtoken";
 
 const FormLogin = () => {
   const { toast } = useToast();
@@ -35,6 +36,8 @@ const FormLogin = () => {
       description: "You have successfully logged in",
       variant: "success",
     });
+
+    push("/");
   };
   return (
     <form
