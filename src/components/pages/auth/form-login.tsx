@@ -1,11 +1,12 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/components/ui/use-toast";
 import { LoginSchemaType, RegisterSchema } from "@/lib/validations/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { FieldValues, useForm } from "react-hook-form";
 import { loginAction } from "./action-auth";
+import { useToast } from "@/components/ui/use-toast";
 
 const FormLogin = () => {
   const { toast } = useToast();
