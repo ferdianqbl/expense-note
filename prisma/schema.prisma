@@ -12,3 +12,51 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id        Int       @id @default(autoincrement())
+  userId    String    @unique @default(cuid())
+  username  String    @unique @db.VarChar(255)
+  photo     String?   @db.Text
+  token     String    @unique @db.VarChar(255)
+  password  String    @db.VarChar(255)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now()) @updatedAt
+  balance   Balance[]
+  expense   Expense[]
+}
+
+model Category {
+  id         Int       @id @default(autoincrement())
+  categoryId String    @unique @default(cuid())
+  name       String
+  icon       String
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @default(now()) @updatedAt
+  expense    Expense[]
+}
+
+model Balance {
+  id        Int      @id @default(autoincrement())
+  balanceId String   @unique @default(cuid())
+  userId    Int
+  balance   Float
+  timestamp DateTime @default(now())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model Expense {
+  id         Int        @id @default(autoincrement())
+  expenseId  String     @unique @default(cuid())
+  categoryId Int
+  userId     Int
+  expense    Float
+  note       String
+  timestamp  DateTime   @default(now())
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @default(now()) @updatedAt
+  user       User       @relation(fields: [userId], references: [id])
+  category   Category[]
+}
