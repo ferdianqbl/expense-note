@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { register as registerAction } from "./action-auth";
+import { registerAction } from "./action-auth";
 import { useForm, FieldValues } from "react-hook-form";
 import { RegisterSchema, RegisterSchemaType } from "@/lib/validations/auth";
 import { zodResolver } from "@hookform/resolvers/zod";

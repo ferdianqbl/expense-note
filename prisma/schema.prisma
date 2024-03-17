@@ -18,7 +18,7 @@ model User {
   userId    String    @unique @default(cuid())
   username  String    @unique @db.VarChar(255)
   photo     String?   @db.Text
-  token     String?   @unique @db.VarChar(255)
+  token     String?   @db.Text
   password  String    @db.VarChar(255)
   createdAt DateTime  @default(now())
   updatedAt DateTime  @default(now()) @updatedAt
