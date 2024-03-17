@@ -27,6 +27,7 @@ export const registerAction = async (username: string, password: string) => {
       data: {
         username,
         password: hashedPassword,
+        token: null,
       },
     });
 

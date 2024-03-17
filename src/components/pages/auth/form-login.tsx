@@ -35,7 +35,6 @@ const FormLogin = () => {
       description: "You have successfully logged in",
       variant: "success",
     });
-    console.log(res.data);
   };
   return (
     <form
