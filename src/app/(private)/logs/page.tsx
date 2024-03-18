@@ -1,6 +1,14 @@
 import logsData from "@/components/static/updated-logs";
+import { serverTokenVerify } from "@/lib/token/token-server";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 
 const Page = () => {
+  console.log("logs");
+  const res = serverTokenVerify(cookies().get("token")?.value || "");
+  if (res.error) {
+    return redirect("/login");
+  }
   return (
     <div className="flex flex-col gap-4">
       <h1 className="font-bold text-2xl">Updated Feature</h1>

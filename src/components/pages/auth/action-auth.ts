@@ -86,7 +86,7 @@ export const loginAction = async (username: string, password: string) => {
       },
       process.env.JWT_SECRET || "",
       {
-        expiresIn: 60 * 60,
+        expiresIn: 60 * 60 * 24,
       }
     );
 
