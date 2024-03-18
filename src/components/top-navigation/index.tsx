@@ -2,11 +2,13 @@
 import { ExitIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 import { Button } from "../ui/button";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import Cookies from "js-cookie";
 
 const TopNavigation = () => {
   const { setTheme } = useTheme();
   const pathname = usePathname();
+  const { push } = useRouter();
 
   if (pathname === "/login" || pathname === "/register")
     return (
@@ -60,8 +62,16 @@ const TopNavigation = () => {
         <MoonIcon className="h-[1.2rem] w-[1.2rem]" />
       </Button>
 
-      <div className="w-full text-center font-bold lowercase">Ferdianqbl</div>
-      <Button variant={"outline"} className="ms-auto" size={"icon"}>
+      <div className="w-full text-center font-bold lowercase"></div>
+      <Button
+        variant={"outline"}
+        className="ms-auto"
+        size={"icon"}
+        onClick={() => {
+          Cookies.remove("token");
+          push("/login");
+        }}
+      >
         <ExitIcon className="h-[1.2rem] w-[1.2rem]" />
       </Button>
     </nav>
