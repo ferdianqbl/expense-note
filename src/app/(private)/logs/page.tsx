@@ -4,7 +4,6 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 const Page = () => {
-  console.log("logs");
   const res = serverTokenVerify(cookies().get("token")?.value || "");
   if (res.error) {
     return redirect("/login");

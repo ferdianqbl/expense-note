@@ -80,23 +80,23 @@ export const loginAction = async (username: string, password: string) => {
       photo: user?.photo || "",
     };
 
-    // const token = jwt.sign(
-    //   {
-    //     data: userData,
-    //   },
-    //   process.env.JWT_SECRET || "",
-    //   {
-    //     expiresIn: 60 * 60 * 24,
-    //   }
-    // );
+    const token = jwt.sign(
+      {
+        data: userData,
+      },
+      process.env.JWT_SECRET || "",
+      {
+        expiresIn: 60 * 60 * 24,
+      }
+    );
 
-    // serverSaveToken(token);
+    serverSaveToken(token);
 
     return {
       error: false,
       status: "success",
       message: "Login success",
-      data: "token",
+      data: token,
     } as APIResponseType;
   } catch (error: any) {
     return {
