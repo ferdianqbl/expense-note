@@ -7,10 +7,10 @@ import { redirect } from "next/navigation";
 
 const Page = () => {
   console.log("home");
-  const res = serverTokenVerify(cookies().get("token")?.value || "");
-  if (res.error) {
-    return redirect("/login");
-  }
+  // const res = serverTokenVerify(cookies().get("token")?.value || "");
+  // if (res.error) {
+  //   return redirect("/login");
+  // }
   return (
     <>
       <div className="flex flex-col gap-3">
